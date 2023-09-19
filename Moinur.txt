@@ -1,0 +1,94 @@
+Name: Md. Moinur Hossain
+Assistant Programmer
+National Board of Revenue (NBR)
+......................................
+
+//Problem Number:01
+package Exam;
+
+import java.util.Scanner;
+
+public class CheckPrimeNumber {
+
+	public static void main(String[] args) {
+		
+		int num;
+		boolean isPrime=true;
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		num=input.nextInt();
+		
+		input.close();
+		
+		for(int i=2;i<=num/2;i++)
+		{
+			if(num%i==0)
+			{
+				isPrime=false;
+				break;
+			}
+		}
+		if(isPrime)
+			System.out.println("This is Prime Number.");
+		else
+			System.out.println("This is not Prime Number.");
+
+	}
+
+}
+
+//Problem Number:03
+package Exam;
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		
+		String original, reverse=" ";
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter a String:");
+		original=input.nextLine();
+		
+		input.close();
+		
+		int length=original.length();
+		
+		for(int i=length-1;i>=0;i--)
+		{
+			reverse=reverse+original.charAt(i);
+		}
+		
+		System.out.println("Reverse String is:"+reverse);
+	}
+
+}
+
+//Problem Number:05
+package Exam;
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		
+		int num;
+		double fact=1;
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter Number:");
+		num=input.nextInt();
+		
+		input.close();
+		
+		for(int i=1;i<=num;i++)
+		{
+			fact=fact*i;
+		}
+		
+		System.out.println("Factorial of "+num+" is:"+fact);
+
+	}
+
+}
